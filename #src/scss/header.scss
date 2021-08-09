@@ -1,5 +1,77 @@
 //====================================================================================================
 
+.header {
+  &__content {
+    max-width: 1236px;
+    padding: 20px 15px;
+    margin: 0 auto;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    flex: 0 0 26px;
+    height: 26px
+  }
+
+  &__menu {
+    @include adaptiv-value('padding-left', 73, 40, 1);
+    flex: 1 1 auto;
+  }
+
+  &__social {
+
+  }
+
+  &__get-started {
+
+  }
+
+}
+
+.social-header {
+  display: flex;
+}
+
+.menu {
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    @media (min-width: $md3+px) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+  }
+  &__item {
+    color: #697CA6;
+    font-weight: 500;
+    transition: color 0.3s ease 0s;
+    &._active {
+      font-weight: 700;
+      color: #5E81FE;
+    }
+    @media (min-width: $md3+px) {
+      padding: 5px 0;
+    }
+    &:not(:last-child) {
+      margin-right: 45/12 * 1em;
+    }
+  }
+
+  &__link {
+    color: inherit;
+
+  }
+}
+
 //====================================================================================================
 
 /*
