@@ -1,6 +1,18 @@
 //====================================================================================================
 
 .header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &__wrapper {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+  }
   &__content {
     max-width: 1236px;
     padding: 20px 15px;
@@ -14,40 +26,89 @@
 
   &__logo {
     flex: 0 0 26px;
-    height: 26px
+    height: 26px;
+    z-index: 5;
   }
 
   &__menu {
     @include adaptiv-value('padding-left', 73, 40, 1);
-    flex: 1 1 auto;
+
+    @media (min-width: $md4+px) {
+      margin-right: 10px;
+    }
+    @media (min-width: $md2+px) {
+      flex: 1 1 auto;
+    }
   }
 
   &__social {
-
+    z-index: 5;
   }
 
   &__get-started {
-
+    z-index: 5;
+    @media (min-width: $md4+px) {
+      @include adaptiv-value('padding-left', 44, 25, 1);
+    }
+    @media (max-width: $md2+px) {
+      flex: 1 1 auto;
+    }
   }
 
-}
+  &__button {
+    font-weight: 700;
+    color: #0050f8;
+    background: #D2E1FF;
+    border-radius: 2px;
+    @media (any-hover: hover) {
+      &:hover {
+        background: #0050F8;
+        color: #fff;
+      }
+    }
+  }
 
-.social-header {
-  display: flex;
 }
 
 .menu {
   &__body {
-    display: flex;
-    align-items: center;
+    @media (max-width: $md2+px) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      top: 0;
+      left: -100%;
+      background-color: #fcf8f3;
+      transition: left 0.3s ease 0s;
+      padding: 100px 15px 30px 15px;
+      &::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s ease 0s;
+        background-color: #fcf8f3;
+        z-index: 2;
+      }
+      &._active {
+        left: 0;
+        &::before {
+          left: 0;
+        }
+      }
+    }
   }
   &__list {
-    @media (min-width: $md3+px) {
+    margin-bottom: 15px;
+    @media (min-width: $md2+px) {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
-
+      margin-bottom: 0;
     }
   }
   &__item {
@@ -58,31 +119,68 @@
       font-weight: 700;
       color: #5E81FE;
     }
-    @media (min-width: $md3+px) {
+    &:not(:last-child) {
+      @include adaptiv-value('margin-right', 45, 10, 1);
+    }
+    @media (min-width: $md2+px) {
       padding: 5px 0;
     }
-    &:not(:last-child) {
-      margin-right: 45/12 * 1em;
+    @media (max-width: $md2+px) {
+      font-size: 32px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
   }
 
   &__link {
     color: inherit;
+    @media (any-hover: hover) {
+      &:hover {
+        font-weight: 500;
+        color: #5E81FE;
+      }
+    }
+  }
+}
 
+.social-header {
+  display: flex;
+  flex: 0 1 162px;
+  justify-content: space-between;
+  &__item {
+    font-size: 17px;
+    color: #B6BAC7;
+    transition: color 0.3s ease 0s;
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #6188FF;
+      }
+    }
+    @media (max-width: $md4+px) {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+  @media (max-width: $md4+px) {
+    flex: 1 1 auto;
+    justify-content: flex-start;
   }
 }
 
 //====================================================================================================
 
-/*
+
 //Burger
 .icon-menu {
 	display: none;
-	@media (max-width: $md3+px) {
+	@media (max-width: $md2+px) {
 		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
+		position: relative;
 		width: 30px;
 		height: 18px;
 		cursor: pointer;
@@ -90,17 +188,17 @@
 		span {
 			transition: all 0.3s ease 0s;
 			top: calc(50% - 1px);
-			left: 0px;
+			left: 0;
 			position: absolute;
 			width: 100%;
 			height: 2px;
 			background-color: #000;
 			&:first-child {
-				top: 0px;
+				top: 0;
 			}
 			&:last-child {
 				top: auto;
-				bottom: 0px;
+				bottom: 0;
 			}
 		}
 		&._active {
@@ -118,4 +216,3 @@
 		}
 	}
 }
-*/

@@ -18,8 +18,14 @@
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .btn {
+	font-size: 13px;
+	line-height: 115%;
 	display: inline-flex;
-	padding: 0px 0px;
+	justify-content: center;
+	align-items: center;
+	padding: 13px 15px;
+	min-height: 43px;
+	transition: all 0.3s ease 0s;
 	@media (min-width: 992px) {
 		&:hover {
 		}
