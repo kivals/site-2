@@ -264,3 +264,12 @@ body.ie {
 	}
 }
 //</ГОТОВЫЕ КЛАССЫ>====================================================================================================
+.swiper-pagination-bullets {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.swiper-pagination-bullet {
+	cursor: pointer;
+
+}
