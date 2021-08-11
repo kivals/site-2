@@ -87,6 +87,10 @@ body {
 	&__intro-slider {
 		background: #F4F7FF;
 	}
+
+	&__customers {
+
+	}
 }
 //===================================================================================================================================
 .slider-intro {
@@ -173,6 +177,40 @@ body {
 		line-height: 100%;
 	}
 }
+//===================================================================================================================================
+.customers {
+	@include adaptiv-value('padding-top', 58, 20, 1);
+	@include adaptiv-value('padding-bottom', 58, 20, 1);
 
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (min-width: $md3+px) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__link {
+		color: #D6DAE5;
+		font-size: 37px;
+		transition: color 0.3s ease 0s;
+		margin-bottom: 1em;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #5982E7;
+			}
+		}
+		@media (min-width: $md3+px) {
+			font-size: 28px;
+		}
+	}
+}
 //===================================================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================

@@ -24,7 +24,21 @@
 		display: block;
 	}
 }
-
+._icon-bitbucket:before {
+	content: "\e90c";
+}
+._icon-watch:before {
+	content: "\e90d";
+}
+._icon-Facebook:before {
+	content: "\e90e";
+}
+._icon-atlassian:before {
+	content: "\e90f";
+}
+._icon-audi:before {
+	content: "\e910";
+}
 ._icon-facebook:before {
 	content: "\e900";
 }
