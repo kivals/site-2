@@ -271,5 +271,30 @@ body.ie {
 
 .swiper-pagination-bullet {
 	cursor: pointer;
+	flex: 0 0 11px;
+	height: 11px;
+	background-color: #D6DAE5;
+	border-radius: 50%;
+	transition: background-color 0.3s ease 0s;
+	margin: 2px 0px;
+	&:not(:last-child) {
+		margin-right: 12px;
+	}
+}
 
+.swiper-pagination-bullet-active {
+	background-color: #5982E7;
+}
+
+._title {
+	font-weight: 300;
+	@include adaptiv-value('font-size', 48, 20, 1);
+	margin-bottom: 28/48 * 1em;
+	font-size: 48px;
+	line-height: 120%;
+	text-align: center;
+	span {
+		font-weight: 500;
+		color: #3D4F9F;
+	}
 }

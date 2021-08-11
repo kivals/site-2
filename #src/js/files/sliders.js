@@ -67,7 +67,7 @@ if (document.querySelector('.slider-intro__body')) {
 		observeParents: true,
 		slidesPerView: 1,
 		spaceBetween: 32,
-		watchOverflow: true,
+		watchOverflow: false,
 		speed: 800,
 		loop: true,
 		loopAdditionalSlides: 5,
