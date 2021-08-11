@@ -89,7 +89,10 @@ body {
 	}
 
 	&__customers {
+	}
 
+	&__manage {
+		background: #F4F7FF;
 	}
 }
 //===================================================================================================================================
@@ -128,12 +131,6 @@ body {
 	}
 	&__header-text {
 		pointer-events: none;
-		font-family: Roboto;
-		color: $blueColor;
-		font-weight: 500;
-		text-transform: uppercase;
-		font-size: 10px;
-		line-height: 120%;
 		margin-bottom: 1em;
 	}
 
@@ -143,12 +140,8 @@ body {
 
 	&__text {
 		pointer-events: none;
-		@include adaptiv-value('font-size', 15, 11, 1);
-		font-family: Roboto;
-		line-height: 180%;
 		margin-bottom: 20/15 * 1em;
 		max-width: 502px;
-		text-align: center;
 	}
 
 	&__play {
@@ -209,6 +202,93 @@ body {
 		}
 		@media (min-width: $md3+px) {
 			font-size: 28px;
+		}
+	}
+}
+//===================================================================================================================================
+.manage {
+	@include adaptiv-value('padding-top', 170, 80, 1);
+	@include adaptiv-value('padding-bottom', 170, 80, 1);
+
+	&__body {
+		padding: 0 15px;
+		@media (min-width: $md3+px) {
+			display: flex;
+		}
+
+	}
+
+	&__column {
+		display: flex;
+		margin-bottom: 20px;
+		@media (min-width: $md3+px) {
+			flex: 1 1 50%;
+		}
+		&_left {
+			justify-content: center;
+			@media (min-width: $md3+px) {
+				justify-content: flex-end;
+			}
+		}
+
+		&_right {
+			@media (min-width: $md3+px) {
+				justify-content: flex-start;
+			}
+
+		}
+	}
+
+	&__image {
+		padding-bottom: 75%;
+		flex: 1 1 auto;
+	}
+}
+
+.text-content {
+	max-width: 413px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (min-width: $md3+px) {
+		align-items: flex-start;
+	}
+	&__header-text {
+		margin-bottom: 27/10 * 1em;
+	}
+
+	&__title {
+		margin-bottom: 27/48 * 1em;
+	}
+
+	&__text {
+		margin-bottom: 50/15 * 1em;
+		text-align: left;
+	}
+
+	&__buttons {
+		display: flex;
+	}
+
+	&__button {
+		font-weight: 700;
+		color: #ADB4D2;
+		border: 1px solid #ADB4D2;
+		border-radius: 2px;
+		width: 129px;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		&::before {
+			transform: translateY(23%);
+			margin-left: 5px;
+			font-size: 7px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #0050F8;
+				color: #fff;
+			}
 		}
 	}
 }
