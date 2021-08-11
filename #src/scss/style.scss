@@ -192,7 +192,7 @@ body {
 
 	&__link {
 		color: #D6DAE5;
-		font-size: 37px;
+		font-size: 32px;
 		transition: color 0.3s ease 0s;
 		margin-bottom: 1em;
 		@media (any-hover: hover) {
@@ -207,11 +207,10 @@ body {
 }
 //===================================================================================================================================
 .manage {
-	@include adaptiv-value('padding-top', 170, 80, 1);
-	@include adaptiv-value('padding-bottom', 170, 80, 1);
+	@include adaptiv-value('padding-top', 170, 60, 1);
+	@include adaptiv-value('padding-bottom', 100, 10, 1);
 
 	&__body {
-		padding: 0 15px;
 		@media (min-width: $md3+px) {
 			display: flex;
 		}
@@ -220,20 +219,23 @@ body {
 
 	&__column {
 		display: flex;
-		margin-bottom: 20px;
-		@media (min-width: $md3+px) {
-			flex: 1 1 50%;
-		}
 		&_left {
 			justify-content: center;
+
 			@media (min-width: $md3+px) {
-				justify-content: flex-end;
+				flex: 0 1 50%;
+				justify-content: flex-start;
+			}
+			@media (max-width: $md3+px) {
+				margin-bottom: 20px;
 			}
 		}
 
 		&_right {
 			@media (min-width: $md3+px) {
+				flex-grow: 1;
 				justify-content: flex-start;
+				margin-right: -20%;
 			}
 
 		}
