@@ -97,6 +97,8 @@ body {
 
 	&__features {
 	}
+	&__stats {
+	}
 }
 //===================================================================================================================================
 .slider-intro {
@@ -451,8 +453,75 @@ body {
 
 }
 
+//===================================================================================================================================
+.stats {
+	&__body {
+		@media (min-width: $md3+px) {
+			display: flex;
+		}
+	}
+	&__column {
+		@include adaptiv-value('padding-top', 66, 20, 1);
+		@include adaptiv-value('padding-bottom', 66, 20, 1);
+		flex: 0 0 50%;
+		&_left {
+			background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+			@media (min-width: $md3+px) {
+				display: flex;
+				justify-content: flex-end;
+				@include adaptiv-value('padding-right', 90, 40, 1);
+			}
+		}
 
+		&_right {
+			background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+			@media (min-width: $md3+px) {
+				display: flex;
+				justify-content: flex-start;
+				@include adaptiv-value('padding-left', 90, 40, 1);
+			}
+		}
+	}
+	&__item {
+		flex: 0 1 260px;
+	}
+}
 
+.item-stats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__image {
+		width: 67px;
+		height: 67px;
+		margin-bottom: 24px;
+	}
 
+	&__numbers {
+		@include adaptiv-value('font-size', 48, 36, 1);
+		margin-bottom: 27/48 * 1em;
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 18, 14, 1);
+	}
+
+	&_left {
+		color: #fff;
+		@media (min-width: $md3+px) {
+			text-align: right;
+			align-items: flex-end;
+		}
+	}
+
+	&_right {
+		color: #5E80FF;
+		@media (min-width: $md3+px) {
+			text-align: left;
+			align-items: flex-start;
+		}
+	}
+
+}
 //===================================================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================
