@@ -97,7 +97,12 @@ body {
 
 	&__features {
 	}
+
 	&__stats {
+	}
+
+	&__blog {
+		background: #F5F8FF;
 	}
 }
 //===================================================================================================================================
@@ -314,10 +319,7 @@ body {
 	}
 
 	&__title {
-		font-size: 24px;
-		font-weight: 500;
-		line-height: 30 / 24 * 100%;
-		color: #3D4F9F
+
 	}
 
 	&__buttons {
@@ -522,6 +524,44 @@ body {
 		}
 	}
 
+}
+//===================================================================================================================================
+.blog {
+	@include adaptiv-value('padding-top', 104, 40, 1);
+	@include adaptiv-value('padding-bottom', 104, 40, 1);
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__header-text {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		margin-bottom: 90 / 24 * 1em;
+	}
+}
+
+.slider-blog {
+	&__container {
+		@include adaptiv-value('padding-top', 64, 35, 1);
+		@include adaptiv-value('padding-bottom', 64, 35, 1);
+		background-color: #FFF;
+	}
+
+	&__slide {
+		display: flex;
+	}
+
+	&__photos {
+		flex: 0 0 50%;
+	}
+
+	&__content {
+		flex: 0 0 50%;
+	}
 }
 //===================================================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================
