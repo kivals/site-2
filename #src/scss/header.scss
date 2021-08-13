@@ -57,10 +57,8 @@
   }
 
   &__button {
-    font-weight: 700;
     color: #0050f8;
     background: #D2E1FF;
-    border-radius: 2px;
     @media (any-hover: hover) {
       &:hover {
         background: #0050F8;
