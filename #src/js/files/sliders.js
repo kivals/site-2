@@ -105,3 +105,23 @@ if (document.querySelector('.slider-blog__body')) {
 		},
 	})
 }
+
+if (document.querySelector('.slider-blog__body')) {
+	new Swiper('.slider-quotes__body', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 32,
+		watchOverflow: false,
+		speed: 800,
+		loop: true,
+		loopAdditionalSlides: 5,
+		preloadImages: false,
+		parallax: true,
+		// Dotts
+		pagination: {
+			el: '.slider-quotes__dots',
+			clickable: true,
+		},
+	})
+}
