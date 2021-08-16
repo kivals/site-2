@@ -80,3 +80,28 @@ if (document.querySelector('.slider-intro__body')) {
 		},
 	});
 }
+
+if (document.querySelector('.slider-blog__body')) {
+	new Swiper('.slider-blog__body', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 32,
+		watchOverflow: false,
+		speed: 800,
+		loop: true,
+		loopAdditionalSlides: 5,
+		preloadImages: false,
+		parallax: true,
+		// Dotts
+		pagination: {
+			el: '.slider-blog__dots',
+			clickable: true,
+		},
+		// Arrows
+		navigation: {
+			nextEl: '.blog__slider .slider-arrows__item_next',
+			prevEl: '.blog__slider .slider-arrows__item_prev',
+		},
+	})
+}

@@ -321,6 +321,27 @@ body.ie {
 	text-align: center;
 }
 
-._button {
+.slider-arrows {
+	@media (min-width: $md2+px) {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		&__item {
+			color: #A8B4E5;
+			font-size: 18px;
+			&_prev {
+				margin-left: -10%;
+			}
+
+			&_next {
+				margin-right: -10%;
+				transform: rotate(-180deg);
+			}
+		}
+	}
 
 }

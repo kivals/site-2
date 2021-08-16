@@ -546,17 +546,20 @@ body {
 }
 
 .slider-blog {
+	min-width: 0;
 	background-color: #fff;
+	position: relative;
 	@include adaptiv-value('padding-top', 64, 35, 1);
 	@include adaptiv-value('padding-bottom', 64, 35, 1);
 	@include adaptiv-value('padding-left', 35, 10, 1);
 	@include adaptiv-value('padding-right', 35, 10, 1);
-	&__body {
+
+	&__slide {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-
 	}
+
 
 	&__column {
 		&_images {
@@ -568,8 +571,6 @@ body {
 		}
 	}
 
-
-
 	&__title {
 		@include adaptiv-value('font-size', 36, 25, 1);
 		line-height: 45 / 36 * 100%;
@@ -580,10 +581,6 @@ body {
 	&__text {
 		line-height: 26 / 14 * 100%;
 		margin-bottom: 32 / 14 * 1em;
-	}
-
-	&__buttons {
-
 	}
 
 	&__read-button {
@@ -609,6 +606,15 @@ body {
 				color: #0d0a0a;
 			}
 		}
+	}
+
+	&__dots {
+		flex-wrap: nowrap;
+		@include adaptiv-value('margin-top', 104, 20, 1);
+	}
+
+	&__arrows {
+		display: none;
 	}
 }
 
