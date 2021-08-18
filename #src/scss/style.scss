@@ -111,6 +111,10 @@ body {
 
 	&__faq {
 	}
+
+	&__get-started{
+		background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+	}
 }
 //===================================================================================================================================
 .slider-intro {
@@ -877,5 +881,55 @@ body {
 }
 
 //===================================================================================================================================
+.get-started {
+	@include adaptiv-value('padding-top', 91, 25, 1);
+	@include adaptiv-value('padding-bottom', 91, 25, 1);
 
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	&__header-text {
+		color: #fff;
+		margin-bottom: 16/10 * 1em;
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 48px;
+		@include adaptiv-value('font-size', 48, 32, 1);
+		margin-bottom: 28/48 * 1em;
+		span {
+			color: inherit;
+		}
+	}
+
+	&__text {
+		color: #fff;
+		line-height: 28/15 * 100%;
+		margin-bottom: 28/15 * 1em;
+		max-width: 712px;
+		text-align: center;
+	}
+
+	&__buttons {
+		display: flex;
+	}
+
+	&__button {
+		border: 1px solid #A0B4FF;
+		color: #C7D3FF;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #FFF;
+				color: #565F82;
+			}
+		}
+	}
+
+}
+//===================================================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================
