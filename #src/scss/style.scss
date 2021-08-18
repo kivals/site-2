@@ -932,4 +932,86 @@ body {
 
 }
 //===================================================================================================================================
+.newsletter {
+	@include adaptiv-value('padding-top', 118, 25, 1);
+	@include adaptiv-value('padding-bottom', 118, 25, 1);
+
+	&__body {
+		padding: 0 10px;
+		@media (min-width: $md3+px) {
+			display: flex;
+			justify-content: space-between;
+		}
+		@media (max-width: $md3+px) {
+			@include adaptiv-value('padding-left', 70, 5, 1);
+			@include adaptiv-value('padding-right', 70, 5, 1);
+		}
+
+	}
+
+	&__content {
+		margin-bottom: 14px;
+		@media (min-width: $md3+px) {
+			@include adaptiv-value('padding-right', 145, 1, 1);
+			margin-bottom: 0;
+		}
+
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22/18 * 100%;
+		color: #3D4F9F;
+		margin-bottom: 18px;
+	}
+
+	&__text {
+		font-family: Roboto;
+		line-height: 26/15 * 100%;
+	}
+}
+
+.form-newsletter {
+	&__item {
+		@media (min-width: $md2+px) {
+			display: flex;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		min-width: 279px;
+		height: 60px;
+		padding: 22px;
+		background-color: #EFEFF7;
+		color: #7A85AD;
+		border-radius: 5px;
+		font-weight: 700;
+		margin-bottom: 14px;
+		@media (min-width: $md2+px) {
+			margin-right: 14px;
+		}
+
+	}
+
+	&__button {
+		color: #0050f8;
+		background: #d2e1ff;
+		min-width: 184px;
+		height: 60px;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #0050f8;
+				color: #fff;
+			}
+		}
+		@media (max-width: $md2+px) {
+			width: 100%;
+		}
+	}
+}
+//===================================================================================================================================
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
