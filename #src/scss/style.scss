@@ -108,6 +108,9 @@ body {
 	&__quotes {
 		background: linear-gradient(180deg, #EAF0FF 0%, #F6F8FF 100%);
 	}
+
+	&__faq {
+	}
 }
 //===================================================================================================================================
 .slider-intro {
@@ -795,4 +798,84 @@ body {
 	}
 }
 //===================================================================================================================================
+
+.faq {
+	&__body {
+		@include adaptiv-value('padding-top', 176, 40, 1);
+		@include adaptiv-value('padding-right', 70, 25, 1);
+		@include adaptiv-value('padding-bottom', 176, 40, 1);
+		@include adaptiv-value('padding-left', 70, 25, 1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__header-text {
+		margin-bottom: 20/10 * 1em;
+	}
+
+	&__title {
+		margin-bottom: 30/24 * 1em;
+
+	}
+
+	&__spoiler {
+		align-self: stretch;
+	}
+}
+
+.spoiler-faq {
+	&__block {
+		padding: 17px 0 17px 17px;
+		border-bottom: 1px solid #D8E3FE;
+
+		&._active {
+			.spoiler-faq__title {
+				color: #495274;
+				&:before {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+
+	&__title {
+		color: #8E96B7;
+		font-weight: 700;
+		padding: 15px;
+		width: 100%;
+		text-align: left;
+		transition: all 0.3s ease 0s;
+		display: flex;
+		align-items: center;
+		&:before {
+			font-size: 10px;
+			margin-right: 20px;
+		}
+	}
+
+	&__content {
+		@include adaptiv-value('padding-left', 80, 0, 1);
+		@media (min-width: $md3+px) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__text {
+		font-family: Roboto;
+		line-height: 26/14 * 100%;
+		padding-right: 15px;
+		padding-bottom: 15px;
+	}
+
+	&__button {
+		background: #E8ECF4;
+		color: inherit;
+		padding: 13px 25px;
+		flex: 1 1 350px;
+	}
+}
+
+//===================================================================================================================================
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================

@@ -300,10 +300,11 @@ body.ie {
 }
 
 ._title-blue {
-	@include adaptiv-value('font-size', 24, 16, 1);
-	font-weight: 500;
+	@include adaptiv-value('font-size', 28, 22, 1);
+	font-weight: 700;
 	line-height: 30 / 24 * 100%;
-	color: #3D4F9F
+	color: #3D4F9F;
+	text-align: center;
 }
 
 ._header-text {
