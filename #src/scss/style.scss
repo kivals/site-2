@@ -468,6 +468,9 @@ body {
 	&__column {
 		@include adaptiv-value('padding-top', 66, 20, 1);
 		@include adaptiv-value('padding-bottom', 66, 20, 1);
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: center;
 		flex: 0 0 50%;
 		&_left {
 			background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
