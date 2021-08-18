@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
-    //Блок спойлер
-    const faqSpoiler = document.querySelector('.spoiler-faq');
 
     document.addEventListener('click', documentActions);
 
@@ -11,7 +9,11 @@ function ready() {
         const target = e.target;
         if (target.closest('.menu__item') && !target.closest('.menu__item').classList.contains('_active')){
             _removeClasses(document.querySelectorAll('.menu__item'), "_active");
-            target.closest('.menu__item').classList.toggle('_active');
+            const dataNav = target.closest('.menu__item').dataset.nav;
+            const navLinkNodes = document.querySelectorAll(`[data-nav='${dataNav}']`);
+            Array.from(navLinkNodes).forEach((node)=>{
+                node.classList.toggle('_active');
+            })
         }
 
         if (target.closest('.spoiler-faq__block')) {

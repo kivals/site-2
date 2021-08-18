@@ -62,17 +62,20 @@ if (location.hash) {
 }
 //=================
 //Menu
-let iconMenu = document.querySelector(".icon-menu");
-if (iconMenu != null) {
+let iconMenuList = document.querySelectorAll(".icon-menu");
+if (iconMenuList) {
 	let delay = 500;
-	let menuBody = document.querySelector(".menu__body");
-	iconMenu.addEventListener("click", function (e) {
-		if (unlock) {
-			body_lock(delay);
-			iconMenu.classList.toggle("_active");
-			menuBody.classList.toggle("_active");
-		}
-	});
+	let headerMenuBody = document.querySelector(".header .menu__body");
+	const headerIconMenu = document.querySelector('.header .icon-menu');
+	Array.from(iconMenuList).forEach((iconMenu)=>{
+		iconMenu.addEventListener("click", function (e) {
+			if (unlock) {
+				body_lock(delay);
+				headerIconMenu.classList.toggle("_active");
+				headerMenuBody.classList.toggle("_active");
+			}
+		});
+	})
 };
 function menu_close() {
 	let iconMenu = document.querySelector(".icon-menu");
@@ -178,7 +181,7 @@ for (let index = 0; index < tabs.length; index++) {
 Для заголовков слойлеров пишем атрибут data-spoller
 Если нужно включать\выключать работу спойлеров на разных размерах экранов
 пишем параметры ширины и типа брейкпоинта.
-Например: 
+Например:
 data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
 data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
 
@@ -646,7 +649,7 @@ function initRatings() {
 		const ratingActiveWidth = index / 0.05;
 		ratingActive.style.width = `${ratingActiveWidth}%`;
 	}
-	// Возможность указать оценку 
+	// Возможность указать оценку
 	function setRating(rating) {
 		const ratingItems = rating.querySelectorAll('.rating__item');
 		for (let index = 0; index < ratingItems.length; index++) {
